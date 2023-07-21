@@ -17,7 +17,6 @@
     {{-- @php
        $sl=1 
     @endphp --}}
-    @foreach ($portfolios as $portfolio)
     <section class="main-content text-center revealator-slideup revealator-once revealator-delay1">
         <div id="grid-gallery"  class="container grid-gallery">
             
@@ -26,13 +25,16 @@
                 
                 <ul class="row grid">
                     <!-- Portfolio Item Starts -->
-                    <li>
-                        <figure>
-                            <img src="{{asset($portfolio->image)}}" alt="Portolio Image" />
-                            <div><span>{{$portfolio->project}}</span></div>
-                        </figure>
-                    </li>
-                
+                    @if($portfolios->count()>0)
+                    @foreach ($portfolios as $portfolio)
+                        <li>
+                            <figure>
+                                <img src="{{asset($portfolio->image)}}" alt="Portolio Image" />
+                                <div><span>{{$portfolio->project}}</span></div>
+                            </figure>
+                        </li>
+                    @endforeach
+                    @endif
                 </ul>
             </section>
             <!-- Portfolio Grid Ends -->
@@ -40,6 +42,8 @@
             <section class="slideshow">
                 <ul>
                     <!-- Portfolio Item Detail Starts -->
+                    @if($portfolios->count()>0)
+                    @foreach ($portfolios as $portfolio)
                     <li>
                         <figure>
                             <!-- Project Details Starts -->
@@ -66,6 +70,8 @@
                             <!-- Main Project Content Ends -->
                         </figure>
                     </li>
+                    @endforeach
+                    @endif
                     <!-- Portfolio Item Detail Ends -->
 
                 </ul>
@@ -80,7 +86,6 @@
 
         </div>
     </section>
-    @endforeach
 
     <!-- Main Content Ends -->
     
