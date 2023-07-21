@@ -501,6 +501,7 @@ body.light hr.separator {
 }
 
 .home .bg {
+  background-image: url(../../uploads/2.jpg);
   /* background-image: url(../img/2.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -1096,12 +1097,12 @@ body.light hr.separator {
 }
 
 .contact .contactform .output_message.error {
-  background: #07e15b;
+  background: #dc3545;
 }
 
 .contact .contactform .output_message.error:before {
   font-family: FontAwesome;
-  content: "\f14a";
+  content: "\f071";
   padding-right: 10px;
 }
 

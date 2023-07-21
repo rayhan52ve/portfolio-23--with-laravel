@@ -15,10 +15,14 @@
             <div><img src="" class="col-lg-4 bg position-fixed d-none d-lg-block"/></div>
             <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
                 <div>
-                    <img src="{{asset('frontend/img/img-mobile.jpg')}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                    @if ($user->image)
+                    <img src="{{$user->image}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                    @else 
+                    <img src="{{asset('assets/frontend/img/img-mobile.jpg')}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                    @endif 
                     <h1 class="text-uppercase poppins-font">I'm {{$user->name}}.<span>{{$user->designation}}</span></h1>
                     <p class="open-sans-font">{{$user->description}}</p>
-                    <a class="button" href="about.html">
+                    <a class="button" href="{{route('about')}}">
                         <span class="button-text">more about me</span>
                         <span class="button-icon fa fa-arrow-right"></span>
                     </a>
