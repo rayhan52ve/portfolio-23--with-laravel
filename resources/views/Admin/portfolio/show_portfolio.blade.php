@@ -58,7 +58,9 @@
                                 <td>{{$portfolio->youtube}}</td>
                                 <td>{{$portfolio->img_title}}</td>
                                 <td>{{$portfolio->language}}</td>
-                                <td>{{$portfolio->image}}</td>
+                                <td>
+                                    <img src="{{ asset($portfolio->image) }}" width="100px" height="70px" class="thumbnail align-scenter">
+                                </td>
                                 <td>
                                     <a href="{{route('portfolios.edit',$portfolio)}}" class="btn btn-warning btn-sm"><i class="fa-regular fa-pen-to-square"></i></a>
                                                                        

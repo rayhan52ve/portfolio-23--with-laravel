@@ -107,9 +107,9 @@ class AdminController extends Controller
                     $image_name = $image_tmp->getClientOriginalName();
                     $extension = $image_tmp->getClientOriginalExtension();
                     $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
-                    $image_path = 'uploads' . '/' . $fileName;
+                    $image_path = 'uploads/profile' . '/' . $fileName;
 
-                    Image::make($image_tmp)->resize(150, 150)->save($image_path);
+                    Image::make($image_tmp)->resize(500, 500)->save($image_path);
 
                 }
             }elseif(Auth::user()->image){

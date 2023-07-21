@@ -51,10 +51,11 @@
 
                             <label for="image">Image</label>
                             <input type="file" class="form-control " name="image" value="{{$portfolio->image}}">
-
-                            <button type="submit" class="btn btn-primary mt-3">Update</button>
+                            <img src="{{asset($portfolio->image)}}" height="100" width="100">
 
                         </div>
+                        <button type="submit" class="btn btn-primary mt-3">Update</button>
+
 
                     </form>
                 </div>

@@ -501,12 +501,12 @@ body.light hr.separator {
 }
 
 .home .bg {
-  background-image: url(../../uploads/2.jpg);
+  /* background-image: url(../img/img-mobile.jpg); */
   /* background-image: url(../img/2.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 180px);
   z-index: 111;
   border-radius: 30px;
   left: 40px;

@@ -51,9 +51,9 @@ class ProtfolioController extends Controller
                     $image_name = $image_tmp->getClientOriginalName();
                     $extension = $image_tmp->getClientOriginalExtension();
                     $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
-                    $image_path = 'uploads' . '/' . $fileName;
+                    $image_path = 'uploads/portfolio' . '/' . $fileName;
 
-                    Image::make($image_tmp)->resize(150, 150)->save($image_path);
+                    Image::make($image_tmp)->resize(1000, 700)->save($image_path);
 
                 }
             }
@@ -109,9 +109,9 @@ class ProtfolioController extends Controller
                     $image_name = $image_tmp->getClientOriginalName();
                     $extension = $image_tmp->getClientOriginalExtension();
                     $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
-                    $image_path = 'uploads' . '/' . $fileName;
+                    $image_path = 'uploads/portfolio' . '/' . $fileName;
 
-                    Image::make($image_tmp)->resize(150, 150)->save($image_path);
+                    Image::make($image_tmp)->resize(1000, 700)->save($image_path);
 
                 } 
             }elseif($portfolio->image){

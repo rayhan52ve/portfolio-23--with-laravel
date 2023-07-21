@@ -65,10 +65,11 @@
                       <div class="form-group col-md-6">
                         <label for="">Photo</label>
                         <input type="file" class="form-control" value="{{asset(Auth::user()->image)}}" name="image">
+                        <img src="{{asset($user->image)}}" height="100" width="100">
                       </div>
                       
                     </div>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary mt-2">Update</button>
                   </form>
             </div>
         </div>

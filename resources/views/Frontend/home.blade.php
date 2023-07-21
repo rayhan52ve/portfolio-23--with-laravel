@@ -16,7 +16,7 @@
             <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
                 <div>
                     @if ($user->image)
-                    <img src="{{$user->image}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                    <img src="{{asset($user->image)}}" class="col-lg-4 bg position-fixed d-none d-lg-block" alt="my picture" />
                     @else 
                     <img src="{{asset('assets/frontend/img/img-mobile.jpg')}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
                     @endif 
