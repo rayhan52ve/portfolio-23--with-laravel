@@ -17,55 +17,61 @@
               <table class="table table-sm">
                 <tbody>
                   <tr class="pb-6">
-                    <td><img src="{{ asset(Auth::user()->image) }}" width="100px" height="100px" class="thumbnail"></td>
+                    <td>
+                    @if(auth()->user()->image)
+                    <img src="{{ asset(auth()->user()->image) }}" width="100px" height="100px">
+                    @else
+                    <img src="{{ asset('backend/img/profile/profile-6.webp') }}" width="100px" height="100px">
+                    </td>
+                    @endif
                   </tr>
                   <tr>
                     <th scope="col">Name</th>
-                    <td><b>{{Auth::user()->name}}<b></td>
+                    <td><b>{{auth()->user()->name}}<b></td>
                   </tr>
                   <tr>
                     <th scope="col">Description</th>
-                    <td>{{Auth::user()->description}}</td>
+                    <td>{{auth()->user()->description}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Email</th>
-                    <td>{{Auth::user()->email}}</td>
+                    <td>{{auth()->user()->email}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Phone</th>
-                    <td>{{Auth::user()->phone}}</td>
+                    <td>{{auth()->user()->phone}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Designation</th>
-                    <td>{{Auth::user()->designation}}</td>
+                    <td>{{auth()->user()->designation}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Address</th>
-                    <td>{{Auth::user()->address}}</td>
+                    <td>{{auth()->user()->address}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Age</th>
-                    <td>{{Auth::user()->age}}</td>
+                    <td>{{auth()->user()->age}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Nationality</th>
-                    <td>{{Auth::user()->nationality}}</td>
+                    <td>{{auth()->user()->nationality}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Languages</th>
-                    <td>{{Auth::user()->languages}}</td>
+                    <td>{{auth()->user()->languages}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Freelance</th>
-                    <td>{{Auth::user()->freelance}}</td>
+                    <td>{{auth()->user()->freelance}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Skype</th>
-                    <td>{{Auth::user()->skype}}</td>
+                    <td>{{auth()->user()->skype}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Project Completed</th>
-                    <td>{{Auth::user()->complete_project}}</td>
+                    <td>{{auth()->user()->complete_project}}</td>
                   </tr>
               </table> 
               <a class="btn btn-info " href="{{route('profile_edit',$user->id)}}">Edit</a>            

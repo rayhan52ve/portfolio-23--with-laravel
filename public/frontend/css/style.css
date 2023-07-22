@@ -501,17 +501,17 @@ body.light hr.separator {
 }
 
 .home .bg {
-  /* background-image: url(../img/img-mobile.jpg); */
+  background-image: url(../img/4.jpg);
   /* background-image: url(../img/2.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: calc(100vh - 180px);
+  height: calc(95vh - 170px);
   z-index: 111;
   border-radius: 30px;
   left: 40px;
-  top: 40px;
-  box-shadow: 0 0 7px rgba(0,0,0,.9);
+  top: 50px;
+  box-shadow: 0 0 7px rgba(26, 1, 1, 0.9);
 }
 
 .home .container-home {

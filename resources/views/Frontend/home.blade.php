@@ -18,7 +18,7 @@
                     @if ($user->image)
                     <img src="{{asset($user->image)}}" class="col-lg-4 bg position-fixed d-none d-lg-block" alt="my picture" />
                     @else 
-                    <img src="{{asset('assets/frontend/img/img-mobile.jpg')}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                    <img src="{{asset('frontend/img/img-mobile.jpg')}}" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
                     @endif 
                     <h1 class="text-uppercase poppins-font">I'm {{$user->name}}.<span>{{$user->designation}}</span></h1>
                     <p class="open-sans-font">{{$user->description}}</p>

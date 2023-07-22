@@ -2,7 +2,11 @@
     <!-- User Menu Start -->
     <div class="user-container d-flex">
         <a href="#" class="d-flex user ">
-           <img class="profile" alt="profile" src="{{asset(Auth::user()->image)}}"/>
+            @if (auth()->user()->image)
+               <img class="profile" alt="profile" src="{{asset(auth()->user()->image)}}"/>
+            @else
+               <img class="profile" alt="profile" src="{{asset('backend/img/profile/profile-6.webp')}}"/>
+            @endif
             <div class="name"></div>
         </a>
         <div class="dropdown-menu d-none">
