@@ -25,11 +25,11 @@
                 <p class="open-sans-font mb-3">{{@$portfolio->description}}</p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail me</span>{{Auth::user()->email}}
+                    <span class="d-block">mail me</span>{{@$user->email}}
                 </p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-phone-square position-absolute"></i>
-                    <span class="d-block">call me</span>{{Auth::user()->phone}}
+                    <span class="d-block">call me</span>{{@$user->phone}}
                 </p>
                 <ul class="social list-unstyled pt-1 mb-5">
                     <li class="facebook"><a title="Facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>

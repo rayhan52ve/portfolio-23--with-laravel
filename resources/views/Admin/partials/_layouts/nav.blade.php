@@ -71,36 +71,36 @@
     <div class="menu-container flex-grow-1">
         <ul id="menu" class="menu">
             <li>
-                <a href="" class="">
+                <a href="{{route('dashboard')}}" class="{{ (url()->current()== route('dashboard')) ? 'active' : '' }}">
                     <i data-acorn-icon="shop" class="icon" data-acorn-size="18"></i>
                     <span class="label">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('profile')}}" class="">
+                <a href="{{route('profile')}}" class="{{ (url()->current()== route('profile')) ? 'active' : '' }}">
                     <i data-acorn-icon="user" class="icon" data-acorn-size="18"></i>
                     <span class="label">Profile</span>
                 </a>
             </li>
           
             <li>
-                <a href="#favorites" data-href="" class="">
+                <a href="#favorites"    class="">
                     <i data-acorn-icon="heart" class="icon" data-acorn-size="18"></i>
                     <span class="label">Education</span>
                 </a>
                 <ul id="favorites">
                     <li>
                         <a href="{{route("educations.create")}}" class="{{ (url()->current()== route('educations.create')) ? 'active' : '' }}">
-                            <span class="label">Add</span>
+                            <span class="">Add</span>
                         </a>
                         <a href="{{route("educations.index")}}" class="{{ (url()->current()== route('educations.index')) ? 'active' : '' }}">
-                            <span class="label">List</span>
+                            <span class="">List</span>
                         </a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#experians" data-href="" class="">
+                <a href="#experians"  class="">
                     <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
                     <span class="label">Experians</span>
                 </a>
@@ -116,44 +116,44 @@
                 </ul>
             </li>
             <li>
-                <a href="#skils" data-href="" class="">
+                <a href="#skils"  class="">
                     <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
                     <span class="label">Skils</span>
                 </a>
                 <ul id="skils">
                     <li>
-                        <a href="{{route('skils.create')}}" class="">
+                        <a href="{{route('skils.create')}}" class="{{ (url()->current()== route('skils.create')) ? 'active' : '' }}">
                             <span class="label">Add</span>
                         </a>
-                        <a href="{{route('skils.index')}}" class="">
+                        <a href="{{route('skils.index')}}" class="{{ (url()->current()== route('skils.index')) ? 'active' : '' }}">
                             <span class="label">List</span>
                         </a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#potfolio" data-href="" class="">
+                <a href="#potfolio"  class="">
                     <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
                     <span class="label">Potfolio</span>
                 </a>
                 <ul id="potfolio">
                     <li>
-                        <a href="{{route('portfolios.create')}}" class="">
+                        <a href="{{route('portfolios.create')}}" class="{{ (url()->current()== route('portfolios.create')) ? 'active' : '' }}">
                             <span class="label">Add</span>
                         </a>
-                        <a href="{{route('portfolios.index')}}" class="">
+                        <a href="{{route('portfolios.index')}}" class="{{ (url()->current()== route('portfolios.index')) ? 'active' : '' }}">
                             <span class="label">List</span>
                         </a>
                     </li>
                 </ul>
             </li>
-            {{-- <li>
-                <a href="{{route('support')}}" data-href="" class="">
+            <li>
+                <a href="{{route('support')}}"  class="{{ (url()->current()== route('support')) ? 'active' : '' }}">
                     <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
                     <span class="label">Support</span>
                 </a>
     
-            </li> --}}
+            </li>
             <li>
                 <a href="{{route('logout')}}" class="">
                     <i data-acorn-icon="logout" class="icon" data-acorn-size="18"></i>

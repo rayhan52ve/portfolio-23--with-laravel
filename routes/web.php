@@ -31,7 +31,7 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->group(function(
         Route::resource('portfolios', 'ProtfolioController');
         Route::resource('experiences', 'ExperienceController');
         Route::resource('contacts', 'ContactController');
-        // Route::get('support','AdminController@support')->name('support');
+        Route::get('support','AdminController@support')->name('support');
         Route::get('cv-download-pdf','AdminController@CvDownlooad')->name('CvDownlooad');
 
 
