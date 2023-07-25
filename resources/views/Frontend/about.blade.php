@@ -40,7 +40,7 @@
                             <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->address}}</span> </li>
                             <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->phone}}</span> </li>
                             <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->email}}</span> </li>
-                            <li> <span class="title">Skype :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->skype}}</span> </li>
+                            <li> <span class="title">LinkedIn :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->linkedin}}</span> </li>
                             <li> <span class="title">langages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->languages}}</span> </li>
                         </ul>
                     </div>
@@ -59,7 +59,7 @@
                     <div class="col-6">
                         <div class="box-stats with-margin">
                             <h3 class="poppins-font position-relative">{{@$experience->time}}</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">years of <span class="d-block">experience</span></p>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@if(@$experience->time == 1) year @else years @endif of <span class="d-block">experience</span></p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -68,7 +68,7 @@
                             <p class="open-sans-font m-0 position-relative text-uppercase">completed <span class="d-block">projects</span></p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    {{-- <div class="col-6">
                         <div class="box-stats">
                             <h3 class="poppins-font position-relative">81</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">Happy<span class="d-block">customers</span></p>
@@ -79,7 +79,7 @@
                             <h3 class="poppins-font position-relative">53</h3>
                             <p class="open-sans-font m-0 position-relative text-uppercase">awards <span class="d-block">won</span></p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!-- Boxes Ends -->

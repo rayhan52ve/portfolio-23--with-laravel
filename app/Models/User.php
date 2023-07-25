@@ -21,7 +21,7 @@ class User extends Authenticatable
             'nationality',
             'freelance',
             'languages',
-            'skype',
+            'linkedin',
             'complete_project',
             'cv_download',
     ];

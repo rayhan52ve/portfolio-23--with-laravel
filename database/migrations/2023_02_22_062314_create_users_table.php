@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('nationality')->nullable();
             $table->string('freelance')->nullable();
             $table->string('languages')->nullable();
-            $table->string('skype')->nullable();
+            $table->string('linkedin')->nullable();
             $table->string('complete_project')->nullable();
             $table->string('cv_download')->nullable();
             $table->string('password');

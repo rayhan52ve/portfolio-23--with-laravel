@@ -56,7 +56,7 @@
                       </div>
                       <div class="form-group col-md-6">
                         <label for="">Skype</label>
-                        <input value="{{Auth::user()->skype}}" type="text" class="form-control"  Name="skype">
+                        <input value="{{Auth::user()->linkedin}}" type="text" class="form-control"  Name="linkedin">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="">Completed Projects</label>

@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'name'=>'Sajid Rayhan',
             'image' => 'uploads/imageSeed/sr3.jpg',
             'email'=>'sajidrayhan875@gmail.com',
-            'description'=> 'I am a laravel developer with a Bachelors  degree in Computer Science & Engineering & hands on experience with following areas php Framework(Laravel),Javascript,Ajax,Bootstrap,jQuery,Css etc',
+            'description'=> "I am a laravel developer with a Bachelor's  degree in Computer Science & Engineering & hands on experience with following areas php Framework(Laravel), Javascript, Ajax,Bootstrap, jQuery, Css etc",
             'phone'=>'01329497106',
             'designation'=>'Laravel Developer',
             'address'=>'Sector-6,Uttara,Dhaka',
@@ -26,7 +26,8 @@ class UserSeeder extends Seeder
             'freelance'=>'No',
             'complete_project'=>'3',
             'languages'=>'Bangla,English',
-            // 'cv_download'=>'uploads/cv/sr3.jpg',
+            'linkedin'=>'https://www.linkedin.com/in/sajid-rayhan-a1a953252/',
+            'cv_download'=>'uploads/CV/CV-of-Md-Sajid-Rayhan v3.pdf',
             'email_verified_at'=> now(),
             'password'=> bcrypt(123456)
 

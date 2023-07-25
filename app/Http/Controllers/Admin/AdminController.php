@@ -127,7 +127,7 @@ class AdminController extends Controller
             $user->nationality = $request->nationality;
             $user->freelance = $request->freelance;
             $user->languages = $request->languages;
-            $user->skype = $request->skype;
+            $user->linkedin = $request->linkedin;
             $user->complete_project = $request->complete_project;
             $user->image = $image_path;
             $user->update();
@@ -374,7 +374,7 @@ public function CvDownlooad()
           <div id="details" class="clearfix">
             <div id="client">
               <div class="to">INVOICE TO:</div>
-              <div class="address">'.$protfolio['address'].','.$protfolio['age'].','.$protfolio['phone'].','.$protfolio['age'].','.$protfolio['skype'].'</div>
+              <div class="address">'.$protfolio['address'].','.$protfolio['age'].','.$protfolio['phone'].','.$protfolio['age'].','.$protfolio['linkedin'].'</div>
               <div class="email"><a href="'.$protfolio['email'].'">'.$protfolio['email'].'</a></div>
             </div>
 

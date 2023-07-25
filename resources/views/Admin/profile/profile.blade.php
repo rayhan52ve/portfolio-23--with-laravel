@@ -66,8 +66,8 @@
                     <td>{{auth()->user()->freelance}}</td>
                   </tr>
                   <tr>
-                    <th scope="col">Skype</th>
-                    <td>{{auth()->user()->skype}}</td>
+                    <th scope="col">LinkedIn</th>
+                    <td>{{auth()->user()->linkedin}}</td>
                   </tr>
                   <tr>
                     <th scope="col">Project Completed</th>
