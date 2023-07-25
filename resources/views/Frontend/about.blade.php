@@ -58,8 +58,8 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="box-stats with-margin">
-                            <h3 class="poppins-font position-relative">{{@$experience->time}}</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">@if(@$experience->time == 1) year @else years @endif of <span class="d-block">experience</span></p>
+                            <h3 class="poppins-font position-relative">{{$users->experience}}</h3>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@if($users->experience == 1) year @else years @endif of <span class="d-block">experience</span></p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -119,7 +119,7 @@
                             <div class="icon">
                                 <i class="fa fa-briefcase"></i>
                             </div>
-                            <span class="time open-sans-font text-uppercase">{{$experience->time}} Years of Experience</span>
+                            <span class="time open-sans-font text-uppercase">{{$experience->time}} </span>
                             <h5 class="poppins-font text-uppercase">{{$experience->title}} <span class="place open-sans-font">{{$experience->sector}}</span></h5>
                             <p class="open-sans-font">{{$experience->description}} </p>
                         </li>
