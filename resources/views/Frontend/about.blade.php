@@ -40,7 +40,7 @@
                             <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->address}}</span> </li>
                             <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->phone}}</span> </li>
                             <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->email}}</span> </li>
-                            <li> <span class="title">LinkedIn :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->linkedin}}</span> </li>
+                            <li> <span class="title">LinkedIn :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block"><a target="__blanck" href="{{@$users->linkedin}}">Sajid Rayhan</a></span> </li>
                             <li> <span class="title">langages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">{{@$users->languages}}</span> </li>
                         </ul>
                     </div>
