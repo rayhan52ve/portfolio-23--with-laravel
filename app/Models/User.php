@@ -20,9 +20,10 @@ class User extends Authenticatable
             'image',
             'nationality',
             'freelance',
+            'experience',
             'languages',
             'linkedin',
             'complete_project',
-            'cv_download',
+            'cv',
     ];
 }

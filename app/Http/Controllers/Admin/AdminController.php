@@ -116,6 +116,22 @@ class AdminController extends Controller
                 $image_path = Auth::user()->image;
             }
 
+            
+
+                if($request->file('cv')){
+                  $file = $request->file('cv');
+                  // $filename = time() . '.' . $request->file('cv')->extension();
+                  $filename = $file->getClientOriginalName();
+                  $filePath = 'uploads/CV/';
+                  // $filePath = public_path() . '/uploads/profile/';
+                  $filePath = $file->move($filePath, $filename);
+            }else if($request->user_id) {
+                $user = User::where('id', $request->user_id)->select('id', 'cv')->first();
+                $filePath = $user->upload_cv;
+            } else {
+                $filePath = '';
+            }
+
 
             $user->name = $request->name;
             $user->description = $request->description;
@@ -131,6 +147,7 @@ class AdminController extends Controller
             $user->linkedin = $request->linkedin;
             $user->complete_project = $request->complete_project;
             $user->image = $image_path;
+            $user->cv = $filePath;
             $user->update();
             
         }
@@ -375,8 +392,8 @@ public function CvDownlooad()
           <div id="details" class="clearfix">
             <div id="client">
               <div class="to">INVOICE TO:</div>
-              <div class="address">'.$protfolio['address'].','.$protfolio['age'].','.$protfolio['phone'].','.$protfolio['age'].','.$protfolio['linkedin'].'</div>
-              <div class="email"><a href="'.$protfolio['email'].'">'.$protfolio['email'].'</a></div>
+              <div class="address">'.$protfolio->address .','.$protfolio->age.','.$protfolio->phone .','.$protfolio->age.','.$protfolio->linkedin .'</div>
+              <div class="email"><a href="'.$protfolio->email .'">'.$protfolio->email .'</a></div>
             </div>
 
           <table border="0" cellspacing="0" cellpadding="0">

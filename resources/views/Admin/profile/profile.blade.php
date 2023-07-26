@@ -77,6 +77,11 @@
                     <th scope="col">Project Completed</th>
                     <td>{{auth()->user()->complete_project}}</td>
                   </tr>
+                  <tr>
+                    <th scope="col">CV</th>
+                    <td><a target="__blanck" href="{{asset(Auth::user()->cv)}}"><i style="font-size: 20px" class="fa-solid fa-file-pdf"></i></a></td>
+                    {{-- <td>{{auth()->user()->cv}}</td> --}}
+                  </tr>
               </table> 
               <a class="btn btn-info " href="{{route('profile_edit',$user->id)}}">Edit</a>            
              </div>

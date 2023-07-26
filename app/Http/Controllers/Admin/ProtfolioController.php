@@ -143,10 +143,11 @@ class ProtfolioController extends Controller
     public function destroy(string $id)
     {
         $portfolio = Protfolio::find($id);
-        // $image_path = 'uploads/portfolio/' . $portfolio->image;
-        // if (File::exist($image_path)) {
-        //     File ::delete($image_path);
-        // }
+        $destination = 'uploads/portfolio/' . $portfolio->image;
+        if (File::exists($destination))
+        {
+            File ::destroy($destination);
+        }
         $portfolio->delete();
         return redirect()->back()->with('delete','Portfolio Info Delete Successfully');
     }

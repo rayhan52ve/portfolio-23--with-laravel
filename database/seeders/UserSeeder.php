@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'complete_project'=>'3',
             'languages'=>'Bangla,English',
             'linkedin'=>'https://www.linkedin.com/in/sajid-rayhan-a1a953252/',
-            'cv_download'=>'uploads/CV/CV-of-Md-Sajid-Rayhan v3.pdf',
+            'cv'=>'uploads/CV/CV-of-Md-Sajid-Rayhan.pdf',
             'email_verified_at'=> now(),
             'password'=> bcrypt(123456)
 

@@ -66,7 +66,11 @@
                         <label for="">Completed Projects</label>
                         <input value="{{Auth::user()->complete_project}}" type="text" class="form-control"  Name="complete_project">
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-6 mt-2">
+                        <label for="">CV</label>
+                        <input type="file" class="form-control" value="{{asset(Auth::user()->cv)}}" name="cv">
+                      </div>
+                      <div class="form-group col-md-6 mt-2">
                         <label for="">Photo</label>
                         <input type="file" class="form-control" value="{{asset(Auth::user()->image)}}" name="image">
                         <img src="{{asset($user->image)}}" height="100" width="100">

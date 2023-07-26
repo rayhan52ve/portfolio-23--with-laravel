@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('languages')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('complete_project')->nullable();
-            $table->string('cv_download')->nullable();
+            $table->string('cv')->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
