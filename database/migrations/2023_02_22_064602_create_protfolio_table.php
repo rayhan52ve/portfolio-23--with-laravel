@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('project')->nullable();
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('call')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();

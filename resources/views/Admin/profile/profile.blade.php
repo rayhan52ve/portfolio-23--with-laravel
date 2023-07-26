@@ -62,6 +62,10 @@
                     <td>{{auth()->user()->languages}}</td>
                   </tr>
                   <tr>
+                    <th scope="col">Total Experience</th>
+                    <td>{{auth()->user()->experience}}</td>
+                  </tr>
+                  <tr>
                     <th scope="col">Freelance</th>
                     <td>{{auth()->user()->freelance}}</td>
                   </tr>

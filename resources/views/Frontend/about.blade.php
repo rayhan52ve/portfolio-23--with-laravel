@@ -58,8 +58,8 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="box-stats with-margin">
-                            <h3 class="poppins-font position-relative">{{$users->experience}}</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">@if($users->experience == 1) year @else years @endif of <span class="d-block">experience</span></p>
+                            <h3 class="poppins-font position-relative">{{@$users->experience}}</h3>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@if(@$users->experience == 1) year @else years @endif of <span class="d-block">experience</span></p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -92,7 +92,7 @@
             </div>
             @foreach($skills as $skill)
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
-                <div class="c100 p25">
+                <div class="c100 p{{$skill->percentage}}">
                     <span>{{$skill->percentage}}%</span>
                     <div class="slice">
                         <div class="bar"></div>

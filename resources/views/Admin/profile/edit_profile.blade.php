@@ -51,11 +51,15 @@
                         <input value="{{Auth::user()->languages}}" type="text" class="form-control"  Name="languages">
                       </div>
                       <div class="form-group col-md-6">
+                        <label for="">Total Experience</label>
+                        <input value="{{Auth::user()->experience}}" type="text" class="form-control"  Name="experience">
+                      </div>
+                      <div class="form-group col-md-6">
                         <label for="">Freelance</label>
                         <input value="{{Auth::user()->freelance}}" type="text" class="form-control"  Name="freelance">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="">Skype</label>
+                        <label for="">LinkedIn</label>
                         <input value="{{Auth::user()->linkedin}}" type="text" class="form-control"  Name="linkedin">
                       </div>
                       <div class="form-group col-md-6">

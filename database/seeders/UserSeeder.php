@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'name'=>'Sajid Rayhan',
             'image' => 'uploads/imageSeed/sr3.jpg',
             'email'=>'sajidrayhan875@gmail.com',
-            'description'=> "I am a laravel developer with a Bachelor's  degree in Computer Science & Engineering & hands on experience with following areas php Framework(Laravel), Javascript, Ajax,Bootstrap, jQuery, Css etc",
+            'description'=> "I am a laravel developer with a Bachelor's  degree in Computer Science & Engineering & hands on experience with php Framework(Laravel), Javascript, Ajax,Bootstrap, jQuery, CSS etc.",
             'phone'=>'01329497106',
             'designation'=>'Laravel Developer',
             'experience'=>'0.6',

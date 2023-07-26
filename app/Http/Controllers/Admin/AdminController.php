@@ -105,11 +105,11 @@ class AdminController extends Controller
                 if ($image_tmp->isValid()) {
                     // Upload Images after Resize
                     $image_name = $image_tmp->getClientOriginalName();
-                    $extension = $image_tmp->getClientOriginalExtension();
-                    $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
-                    $image_path = 'uploads/profile' . '/' . $fileName;
+                    // $extension = $image_tmp->getClientOriginalExtension();
+                    // $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
+                    $image_path = 'uploads/profile' . '/' . $image_name;
 
-                    Image::make($image_tmp)->resize(500, 500)->save($image_path);
+                    Image::make($image_tmp)->resize(1000, 1000)->save($image_path);
 
                 }
             }elseif(Auth::user()->image){
@@ -127,6 +127,7 @@ class AdminController extends Controller
             $user->nationality = $request->nationality;
             $user->freelance = $request->freelance;
             $user->languages = $request->languages;
+            $user->experience = $request->experience;
             $user->linkedin = $request->linkedin;
             $user->complete_project = $request->complete_project;
             $user->image = $image_path;

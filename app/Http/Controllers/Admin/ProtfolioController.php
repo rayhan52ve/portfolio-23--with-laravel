@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-// use Image;
+use Illuminate\Support\Facades\File;
+
 
 class ProtfolioController extends Controller
 {
@@ -49,9 +50,9 @@ class ProtfolioController extends Controller
                 if ($image_tmp->isValid()) {
                     // Upload Images after Resize
                     $image_name = $image_tmp->getClientOriginalName();
-                    $extension = $image_tmp->getClientOriginalExtension();
-                    $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
-                    $image_path = 'uploads/portfolio' . '/' . $fileName;
+                    // $extension = $image_tmp->getClientOriginalExtension();
+                    // $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
+                    $image_path = 'uploads/portfolio' . '/' . $image_name;
 
                     Image::make($image_tmp)->resize(1000, 700)->save($image_path);
 
@@ -107,9 +108,9 @@ class ProtfolioController extends Controller
                 if ($image_tmp->isValid()) {
                     // Upload Images after Resize
                     $image_name = $image_tmp->getClientOriginalName();
-                    $extension = $image_tmp->getClientOriginalExtension();
-                    $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
-                    $image_path = 'uploads/portfolio' . '/' . $fileName;
+                    // $extension = $image_tmp->getClientOriginalExtension();
+                    // $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
+                    $image_path = 'uploads/portfolio' . '/' . $image_name;
 
                     Image::make($image_tmp)->resize(1000, 700)->save($image_path);
 
@@ -142,6 +143,10 @@ class ProtfolioController extends Controller
     public function destroy(string $id)
     {
         $portfolio = Protfolio::find($id);
+        // $image_path = 'uploads/portfolio/' . $portfolio->image;
+        // if (File::exist($image_path)) {
+        //     File ::delete($image_path);
+        // }
         $portfolio->delete();
         return redirect()->back()->with('delete','Portfolio Info Delete Successfully');
     }
