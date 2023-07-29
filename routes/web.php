@@ -26,10 +26,10 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->group(function(
 
     Route::group(['middleware' => ['auth']],function(){
         Route::get('dashboard','AdminController@dashboard')->name('dashboard');
-        Route::resource('skils', 'SkilController');
-        Route::resource('educations', 'EducationController');
-        Route::resource('portfolios', 'ProtfolioController');
-        Route::resource('experiences', 'ExperienceController');
+        Route::resource('skils', 'SkilController')->except('show');
+        Route::resource('educations', 'EducationController')->except('show');
+        Route::resource('portfolios', 'ProtfolioController')->except('show');
+        Route::resource('experiences', 'ExperienceController')->except('show');
         Route::resource('contacts', 'ContactController');
         Route::get('support','AdminController@support')->name('support');
 

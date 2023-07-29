@@ -32,12 +32,12 @@ class SkilController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'program' => 'required|max:20|min:3|string',
-            'percentage' => 'required|string',
+            'program' => 'required|max:8|min:1|string',
+            'percentage' => 'required|integer',
         ],
         $message=[
             'program.required' => 'Please Enter Your Program.',
-            'percentage.required' => 'Please Enter Your Percentage.',
+            'percentage.required' => 'Please Enter Percentage.',
         ]
         );
 
@@ -48,7 +48,10 @@ class SkilController extends Controller
             $skill ->percentage = $data['percentage'];
             $skill ->save();
         }
-        return redirect()->back()->with('success','Skills Info Added Successfully');
+
+        session()->flash('msg','Skills Info Added Successfully');
+        session()->flash('cls','success');
+        return redirect()->back();
     }
 
     /**
@@ -74,13 +77,26 @@ class SkilController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $this->validate($request,[
+            'program' => 'required|max:8|min:1|string',
+            'percentage' => 'required|integer',
+        ],
+        $message=[
+            'program.required' => 'Please Enter Your Program.',
+            'percentage.required' => 'Please Enter Your Percentage.',
+        ]
+        );
+
         if($request->isMethod('PUT')){
             $skill = Skill::find($id);
             $skill ->program =$request->program;
             $skill ->percentage =$request->percentage;
             $skill ->update();
         }
-        return redirect()->route('skils.index')->with('update','Skills Info Updated Successfully');
+
+        session()->flash('msg','Skills Info updated Successfully');
+        session()->flash('cls','warning');
+        return redirect()->route('skils.index');
     }
 
     /**
@@ -90,6 +106,9 @@ class SkilController extends Controller
     {
         $skill = Skill::find($id);
         $skill->delete();
-        return redirect()->back()->with('delete','Skills Info Delete Successfully');
+
+        session()->flash('msg','Skills Info Deleted Successfully');
+        session()->flash('cls','danger');
+        return redirect()->back();
     }
 }

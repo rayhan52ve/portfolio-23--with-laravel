@@ -104,6 +104,7 @@ class AdminController extends Controller
 
                 if ($image_tmp->isValid()) {
                     // Upload Images after Resize
+                    @unlink(public_path('uploads/profile' .$user->image));
                     $image_name = $image_tmp->getClientOriginalName();
                     // $extension = $image_tmp->getClientOriginalExtension();
                     // $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;

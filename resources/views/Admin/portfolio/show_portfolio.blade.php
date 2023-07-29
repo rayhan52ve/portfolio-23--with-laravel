@@ -5,22 +5,16 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card" style="overflow:auto">
-            @if(session('delete'))
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Good News!!</strong>{{ session('delete') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if(session('update'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Good News!!</strong>{{ session('update') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
                 <div class="card-header">
                     <h3>Portfolio Info</h3>
                 </div>
                 <div class="card-body">
+                    @if(session('msg'))
+                        <div class="alert alert-{{session('cls')}} alert-dismissible fade show" role="alert">
+                            {{ session('msg') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <table class="table table-striped">
                         <thead>
                             <tr>

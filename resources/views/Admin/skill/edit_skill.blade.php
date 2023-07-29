@@ -10,7 +10,16 @@
                 <div class="card-header">
                     <h3>Update Skills</h3>
                 </div>
-                <div class="card-body">                   
+                <div class="card-body"> 
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif                  
                     <form action="{{route('skils.update', $skill->id)}}" method="post">
                         @method('PUT')
                         @csrf

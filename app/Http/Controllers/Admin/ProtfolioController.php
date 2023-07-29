@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Illuminate\Support\Facades\File;
 
 
 class ProtfolioController extends Controller
@@ -74,7 +73,10 @@ class ProtfolioController extends Controller
             $portfolio->img_title = $request->img_title;
             $portfolio->save();
         }
-        return redirect()->back()->with('success','Portfolio Info Added Successfully');
+
+        session()->flash('msg','Portfolio Info Added Successfully');
+        session()->flash('cls','success');
+        return redirect()->route('portfolios.index');
     }
 
     /**
@@ -82,7 +84,7 @@ class ProtfolioController extends Controller
      */
     public function show()
     {
-
+        //
     }
 
     /**
@@ -107,6 +109,7 @@ class ProtfolioController extends Controller
 
                 if ($image_tmp->isValid()) {
                     // Upload Images after Resize
+                    @unlink(public_path('uploads/portfolio' .$portfolio->image));
                     $image_name = $image_tmp->getClientOriginalName();
                     // $extension = $image_tmp->getClientOriginalExtension();
                     // $fileName = $image_name . '-' . rand(111, 99999) . '.' . $extension;
@@ -134,7 +137,10 @@ class ProtfolioController extends Controller
             $portfolio->image = $image_path;
             $portfolio->update();
         }
-        return redirect()->route('portfolios.index')->with('update','Portfolio Info Updated Successfully');
+
+        session()->flash('msg','Portfolio Info Updated Successfully');
+        session()->flash('cls','warning');
+        return redirect()->route('portfolios.index');
     }
 
     /**
@@ -143,12 +149,16 @@ class ProtfolioController extends Controller
     public function destroy(string $id)
     {
         $portfolio = Protfolio::find($id);
-        $destination = 'uploads/portfolio/' . $portfolio->image;
-        if (File::exists($destination))
+        $image_path = public_path('uploads/portfolio/' .$portfolio->image);
+        if(file_exists($image_path))
         {
-            File ::destroy($destination);
+            unlink($image_path);
         }
+
         $portfolio->delete();
-        return redirect()->back()->with('delete','Portfolio Info Delete Successfully');
+
+        session()->flash('msg','Portfolio Info Deleted Successfully');
+        session()->flash('cls','danger');
+        return redirect()->back();
     }
 }

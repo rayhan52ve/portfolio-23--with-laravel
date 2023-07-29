@@ -25,15 +25,20 @@
                             </ul>
                         </div>
                     @endif
-                   
+                    @if(session('msg'))
+                        <div class="alert alert-{{session('cls')}} alert-dismissible fade show" role="alert">
+                            {{session('msg')}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <form action="{{route('skils.store')}}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="program">Program</label>
-                            <input type="text" class="form-control" name="program" placeholder="Enter Your Program">
+                            <input type="text" class="form-control" name="program" placeholder="Enter Your Program" value="{{old('program')}}">
 
                             <label for="percentage">Percentage</label>
-                            <input type="number" class="form-control" name="percentage" placeholder="Enter Percentage">
+                            <input type="number" class="form-control" name="percentage" placeholder="Enter Percentage" value="{{old('percentage')}}" >
 
                             <button type="submit" class="btn btn-primary mt-3">Submit</button>
 
