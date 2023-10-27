@@ -28,4 +28,4 @@
 @yield('css')
     <!-- Modernizr JS File -->
 <script src="{{asset('frontend/js/modernizr.custom.js')}}"></script>
-<link rel="icon" type="image/png" href="{{asset('frontend/img/favicon/favicon-196x196.png')}}" sizes="196x196" />
+<link rel="icon" type="image/png" href="{{asset('frontend/img/favicon/sr3.jpg')}}" sizes="196x196" />
