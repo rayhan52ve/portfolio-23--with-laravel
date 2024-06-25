@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Skill;
 use App\Models\Protfolio;
+use App\Models\WebInfo;
 
 class IndexController extends Controller
 {
@@ -39,6 +40,22 @@ class IndexController extends Controller
         $user = User::get()->first();
         $portfolio = Protfolio::first();
         return view('Frontend.contact',compact('user','portfolio'));
+    }
+
+    public function switchStyle($color)
+    {
+        $webInfo = WebInfo::first();
+
+        if($webInfo){
+            $webInfo->update([
+                'front_color' => $color,
+            ]);
+        }else{
+            WebInfo::create([
+                'front_color' => $color,
+            ]);
+        }
+        return back();
     }
 
 }
