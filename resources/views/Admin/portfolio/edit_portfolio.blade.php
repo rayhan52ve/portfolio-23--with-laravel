@@ -19,38 +19,20 @@
                             <label for="title">Title</label>
                             <input type="text" class="form-control" name="title" value="{{$portfolio->title}}">
 
-                            <label for="description">Description</label>
-                            <textarea name="description" class="form-control" rows="3">{{$portfolio->description}}</textarea>
+                            <label for="project">Client</label>
+                            <input type="text" class="form-control" name="client" value="{{$portfolio->client}}" placeholder="Enter Your Project">
 
-                            <label for="project">Project</label>
-                            <input type="text" class="form-control" name="project" value="{{$portfolio->project}}">
+                            <label for="language">Technology:</label>
+                            <input type="text" class="form-control" name="technology" value="{{$portfolio->technology}}" placeholder="Enter Technologies">
 
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" value="{{$portfolio->email}}">
+                            <label for="language">Preview Link:</label>
+                            <input type="text" class="form-control" name="preview" value="{{$portfolio->preview}}" placeholder="Enter Preview Link">
 
-                            <label for="call">Call</label>
-                            <input type="number" class="form-control" name="call" value="{{$portfolio->call}}">
-
-                            <label for="facebook">Facebook</label>
-                            <input type="text" class="form-control" name="facebook"  value="{{$portfolio->facebook}}">
-
-                            <label for="twitter">twitter</label>
-                            <input type="text" class="form-control" name="twitter" value="{{$portfolio->twitter}}">
-
-                            <label for="github">Github</label>
-                            <input type="text" class="form-control" name="github"  value="{{$portfolio->github}}">
-
-                            <label for="youtube">Youtube</label>
-                            <input type="text" class="form-control" name="youtube"  value="{{$portfolio->youtube}}">
-
-                            <label for="img_title">Image Title</label>
-                            <input type="text" class="form-control" name="img_title" placeholder="Enter Image Title" value="{{$portfolio->img_title}}">
-
-                            <label for="language">Language</label>
-                            <input type="text" class="form-control" name="language" placeholder="Enter Language" value="{{$portfolio->language}}">
+                            <label for="language">Order By:</label>
+                            <input type="number" class="form-control" name="order_by" value="{{$portfolio->order_by}}" placeholder="Enter Serial Order">
 
                             <label for="image">Image</label>
-                            <input type="file" class="form-control " name="image" value="{{$portfolio->image}}">
+                            <input type="file" class="form-control " name="image">
                             <img src="{{asset($portfolio->image)}}" height="100" width="100">
 
                         </div>

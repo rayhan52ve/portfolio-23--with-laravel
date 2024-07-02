@@ -7,7 +7,7 @@
         <div class="col-md-8 offset-2" style="margin-top: 50px">
             <div class="card">
                 <div class="card-header">
-                    <h3>Add Portfolio</h3>
+                    <h3>Add Project</h3>
                 </div>
                 <div class="card-body">
                     @if($errors->any())
@@ -26,35 +26,17 @@
                             <label for="title">Title</label>
                             <input type="text" class="form-control" name="title" placeholder="Enter Title">
 
-                            <label for="description">Description</label>
-                            <textarea name="description" class="form-control" rows="3" placeholder="Description"></textarea>
+                            <label for="project">Client</label>
+                            <input type="text" class="form-control" name="client" placeholder="Enter Your Project">
 
-                            <label for="project">Project</label>
-                            <input type="text" class="form-control" name="project" placeholder="Enter Your Project">
+                            <label for="language">Technology:</label>
+                            <input type="text" class="form-control" name="technology" placeholder="Enter Technologies">
 
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+                            <label for="language">Preview Link:</label>
+                            <input type="text" class="form-control" name="preview" placeholder="Enter Preview Link">
 
-                            <label for="call">Call</label>
-                            <input type="number" class="form-control" name="call" placeholder="Enter Your Number">
-
-                            <label for="facebook">Facebook</label>
-                            <input type="text" class="form-control" name="facebook" placeholder="Enter Your Facebook">
-
-                            <label for="twitter">twitter</label>
-                            <input type="text" class="form-control" name="twitter" placeholder="Enter Your Twitter">
-
-                            <label for="github">Github</label>
-                            <input type="text" class="form-control" name="github" placeholder="Enter Your Github">
-
-                            <label for="youtube">Youtube</label>
-                            <input type="text" class="form-control" name="youtube" placeholder="Enter Your Youtube">
-
-                            <label for="img_title">Image Title</label>
-                            <input type="text" class="form-control" name="img_title" placeholder="Enter Image Title">
-
-                            <label for="language">Language</label>
-                            <input type="text" class="form-control" name="language" placeholder="Enter Language">
+                            <label for="language">Order By:</label>
+                            <input type="number" class="form-control" name="order_by" placeholder="Enter Serial Order">
 
                             <label for="image">Image</label>
                             <input type="file" class="form-control" name="image">

@@ -28,4 +28,5 @@
     <script src="{{asset('backend/js/common.js')}}"></script>
     <script src="{{asset('backend/js/scripts.js')}}"></script>
     <script src="{{asset('backend/js/base/loader.js')}}"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script> --}}

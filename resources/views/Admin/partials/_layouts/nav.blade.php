@@ -146,7 +146,7 @@
             <li>
                 <a href="#potfolio" class="@if (url()->current() == route('portfolios.create')) active @elseif(url()->current() == route('portfolios.index')) active @endif">
                     <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Potfolio</span>
+                    <span class="label">My Projrcts</span>
                 </a>
                 <ul id="potfolio">
                     <li>

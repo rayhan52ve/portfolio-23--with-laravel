@@ -32,7 +32,7 @@ class SkilController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'program' => 'required|max:8|min:1|string',
+            'program' => 'required',
             'percentage' => 'required|integer',
         ],
         $message=[
@@ -78,7 +78,7 @@ class SkilController extends Controller
     public function update(Request $request, string $id)
     {
         $this->validate($request,[
-            'program' => 'required|max:8|min:1|string',
+            'program' => 'required',
             'percentage' => 'required|integer',
         ],
         $message=[

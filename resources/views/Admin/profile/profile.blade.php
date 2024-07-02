@@ -84,6 +84,7 @@
                   </tr>
               </table> 
               <a class="btn btn-info " href="{{route('profile_edit',$user->id)}}">Edit</a>            
+              <a class="btn btn-danger " href="{{route('changePassword')}}">Change Password</a>            
              </div>
         </div>
      </div>

@@ -14,16 +14,10 @@ return new class extends Migration
         Schema::create('protfolio', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
-            $table->string('project')->nullable();
-            $table->string('email')->nullable();
-            $table->string('call')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('github')->nullable();
-            $table->string('youtube')->nullable();
-            $table->string('img_title')->nullable();
-            $table->string('language')->nullable();
+            $table->string('client')->nullable();
+            $table->string('technology')->nullable();
+            $table->string('preview')->nullable();
+            $table->integer('order_by')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

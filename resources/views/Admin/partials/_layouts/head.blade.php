@@ -27,5 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <!-- Template Base Styles End -->
 
+    {{-- <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet"> --}}
+
     <link rel="stylesheet" href="{{asset('backend/css/main.css')}}" />
     

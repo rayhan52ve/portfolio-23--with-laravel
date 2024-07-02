@@ -16,7 +16,7 @@
         <li class="icon-box {{ (url()->current()== route('portfolio')) ? 'active' : '' }}" >
             <i class="fa fa-briefcase"></i>
             <a href="{{route('portfolio')}}">
-                <h2>Portfolio</h2>
+                <h2>Projects</h2>
             </a>
         </li>
         <li class="icon-box  {{ (url()->current()== route('contact')) ? 'active' : '' }}">
